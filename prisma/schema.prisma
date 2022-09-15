@@ -15,11 +15,11 @@ model Game {
   title     String
   bannerUrl String
 
-  Ad Ad[]
+  ads Ad[]
 }
 
 model Ad {
-  id              String   @id
+  id              String   @id @default(uuid())
   gameId          String
   name            String
   yearsPlaying    Int
